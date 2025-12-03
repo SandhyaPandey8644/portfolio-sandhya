@@ -1,58 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My portfolio</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <h1> Portfolio</h1>
+
+   
+    <header id="hero">
+        <video autoplay loop muted id="video-background">
+            <source src="bg.mp4.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+
+       
+        <nav class="navbar">
+            <span class="logo">My Portfolio</span> 
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" id="menu-button" aria-expanded="false">
+                ☰
+            </button>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Sandhya Pandey</h1>
+            <p>Frontend Developer & UI/UX Enthusiast</p>
+        </div>
     </header>
-    <nav>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-<section id="about">
-<h2>About Me</h2>
-<p>My name is Sandhya Pandey. I am pursuing a Computer Science degree at the University of Wolverhampton. I enjoy web development, coding, and learning new technologies.</p>
-</section>
+
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is Sandhya Pandey. I am pursuing a Computer Science degree at the University of Wolverhampton. I enjoy web development, coding, and learning new technologies.</p>
+    </section>
 
 
-<section id="projects">
-<h2>Projects</h2>
-<p>Weather App</p> 
-<p>To Do List</p>
-<p>Game Project</p>
-<img src="C:\Users\user\Desktop\portfolio-sandhya\weatherapp.png">
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-row">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+        </div>
+    </section>
 
-</section>
+    <section id="projects">
+        <h2>Projects</h2>
 
+        <div id="projects-grid">
+            <div class="project-card">Weather app</div>
+            <div class="project-card">Game Project</div>
+            <div class="project-card">To do list</div>
+        </div>
+    </section>
 
-<section id="contact">
-<h2>Contact Me</h2>
-<form>
-<label for="name">Name: Sandhya</label><br />
-<input type="text" id="name" name="name" required /><br /><br />
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
 
+        <form id="contact-form-id">
+            <label>Name:</label><br>
+            <input type="text" id="name" required><br><br>
 
-<label for="email">Email:sandhyapandey8644@gmail.com</label><br />
-<input type="email" id="email" name="email" required /><br /><br />
+            <label>Email:</label><br>
+            <input type="email" id="email" required><br><br>
 
+            <label>Message:</label><br>
+            <textarea id="message" required></textarea><br><br>
 
-<label for="message">Message:Can you help me with a web development task?</label><br />
-<textarea id="message" name="message" required></textarea><br /><br />
+            <button type="submit">Send Message</button>
+        </form>
 
+        <div id="form-message"></div>
+    </section>
 
-<button type="submit">Submit</button>
-</form>
-</section>
+    <footer>
+        <p>© 2025 My Portfolio</p>
+    </footer>
 
-
+    <script src="script.js"></script>
 </body>
 </html>
